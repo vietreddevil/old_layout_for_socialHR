@@ -1,0 +1,66 @@
+.logo {
+    height: 62px;
+}
+
+.web_title, .web_title:hover, .web_title:link, .web_title:visited {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.title_social, .title_social:hover {
+    margin-left: 10px;
+    color: black;
+    padding-right: 10px;
+    position: absolute;
+    top: 22.5px;
+    font-size: 15px;
+}
+
+.title_hr, .title_hr:hover {
+    margin-left: -10px;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 17.5px;
+    left: 76.39px;
+}
+
+#page_content {
+    margin-top: 62px;
+}
+
+.navbar a:not(.btn):not(.dropdown-item) {
+    color: black;
+}
+
+#search_form i {
+    color: #7a7676;
+    font-weight: bold;
+}
+
+#search_form input {
+    color: #7a7676;
+    caret-color: #7a7676;
+}
+
+    #search_form input::placeholder {
+        color: #7a7676;
+        opacity: 1;
+    }
+
+    #search_form input:-ms-input-placeholder {
+        color: #7a7676;
+    }
+
+    #search_form input::-ms-input-placeholder {
+        color: #7a7676;
+    }
+
+#select_language img {
+    height: 25px;
+    width: auto;
+}
