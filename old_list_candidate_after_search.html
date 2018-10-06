@@ -1,0 +1,77 @@
+
+@{
+    ViewBag.Title = "list_candidate_after_search";
+    Layout = "~/Areas/Employer/Views/Shared/_Layout.cshtml";
+}
+
+@using socialHR.Areas.Employer.Models
+
+@{
+    List<AuthorData> datas = (List<AuthorData>)ViewData["Message"];
+    var search_term = ViewData["search_term"];
+}
+@* trang nay bh khong dung nhung co the se dung trong sau nay khi muon search ra 1 lis gi do thi se dung *@
+<link rel="stylesheet" type="text/css" href="~/Assets/Employer/vendor/bootstrap/css/bootstrap.min.css" />
+
+<link rel="stylesheet" type="text/css" href="~/Assets/Employer/css/paper-bootstrap-wizard.css" />
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">
+            Danh sách kết quả
+        </h5>
+        <p class="fb-friend-explain">
+            Kết quả cho tìm kiếm <b><i>@search_term</i></b>
+        </p>
+    </div>
+    <div class="card-body">
+        <div class="table-full-width table-tasks">
+            <table class="table">
+                <tbody>
+                    @foreach (var data in datas)
+                    {
+                        <tr href="@data.author_url">
+                            <td class="img-row redirect">
+                                <div class="img-wrapper">
+                                    <img class="img-raised" src="@data.avatar_url" />
+                                </div>
+                            </td>
+                            <td class="text-left redirect">
+                                <span>@data.Name</span>
+                            </td>
+                            <td class="text-center">
+                                <span class="IS-title">
+                                    Influencer score:
+                                </span>
+                                <span class="IS-point">
+                                    @data.influence_score
+                                </span>
+                            </td>
+                            <td class="td-actions text-right">
+                                @using (Html.BeginForm("SocialCVPage", "Home", FormMethod.Post))
+                                {
+                                    <input type="hidden" value="@data.author_url" name="url_to_req"/>
+                                    <button type="submit" class="btn btn-icon">
+                                        <i class="now-ui-icons ui-1_zoom-bold"></i>
+                                    </button>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="~/Assets/Employer/js/core/jquery.min.js"></script>
+
+@* CSS code *@
+
+@* end CSS code *@
+
+@* JS code *@
+
+@* end JS code *@
