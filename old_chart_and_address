@@ -1,0 +1,36 @@
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    get_address();
+    //load_chart();
+    
+});
+
+//function load_chart() {
+//    var options = {
+//        title: {
+//            text: "Biểu đồ phân bố bạn bè theo influence score",
+//            fontFamily:"Arial"
+//        },
+//        data: [{
+//            type: "pie",
+//            startAngle: 45,
+//            showInLegend: "true",
+//            legendText: "{label}",
+//            indexLabel: "{label} ({y})",
+//            yValueFormatString: "#,##0.#" % "",
+//            dataPoints: [
+//                { label: "1",  y: 1 },
+//                { label: "2",  y: 31 },
+//                { label: "3",  y: 7 },
+//                { label: "4",  y: 7 },
+//                { label: "5",  y: 6 },
+//                { label: "6",  y: 10 },
+//                { label: "7",  y: 3 },
+//                { label: "8",  y: 3 },
+//                { label: "9",  y: 3 },
+//                { label: "10", y: 3 }
+//            ]
+//        }]
+//    };
+//    $("#chartContainer").CanvasJSChart(options);
+//}
